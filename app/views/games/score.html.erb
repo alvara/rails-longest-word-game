@@ -1,0 +1,9 @@
+<h1>Result</h1>
+<% if @valid_grid != true %>
+  <p>Sorry but <strong><%= @params[:word] %></strong> can't be built out of <%= params[:letters] %></p>
+<% elsif @valid_english == false %>
+  <p>Sorry but <strong><%= @params[:word] %></strong> </p> is not an English word!</p>
+<% else %>
+  <p><strong>Congratulations!</strong> <%= @params[:word] %> is a valid English word!</p>
+<% end %>
+<%= link_to 'Play Again', new_path %>
